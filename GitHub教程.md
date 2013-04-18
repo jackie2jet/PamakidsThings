@@ -57,3 +57,21 @@
 
 > 在使用github时会有两套登录系统,ssh和http,必须从始至终只选择一套,以免不必要的麻烦;
 
+
+Merge别人的代码
+---
+
+1. git checkout -b `kinnyoku87-dev` dev <br> 先创建一个新的分支并切换到该分支 
+2. git pull https://github.com/`kinnyoku87`/PamakidsApps.git dev <br> 从别的分支里取最新的更新
+3. git branches -v 获取分支列表
+3. 修复好冲突后，git status 查看当前状态
+4. git add . 把所有文件重新添加到库里
+5. git checkout dev 切换到dev分支
+6. git merge `kinnyoku87-dev` 本地合并分支
+
+#### rest ####
+- git log 查看合并日志
+- git reset --hard commit_sha
+- git reset --hard HEAD~5 重置5个commit
+
+
